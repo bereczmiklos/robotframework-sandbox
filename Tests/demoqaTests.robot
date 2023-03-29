@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../Resources/common.robot
 Resource    ../Resources/interactions.robot
+Resource    ../POs/demoqa-forms-po.robot
 Test Setup     MY setup  ${BROWSER}  ${URL}  ${WAITFOR}
 Test Teardown  MY teardown
 
@@ -64,6 +65,18 @@ Create and delete data in table
     ${delete_button}=  Set Variable    //div[@class='rt-tr-group'][${row_id}]/div/div/div/span[@title='Delete']
     UI Click Element    ${delete_button}
 
+Create student with PO
+    ${first_name}=       Set Variable    firstname
+    ${last_name}=        Set Variable    lastname
+    ${email}=            Set Variable    email@email.com
+    ${gender}=           Set Variable    male
+    ${mobile}=           Set Variable    1234567890
+    ${dob}=              Set Variable    29 Mar 2023
+    ${current_address}=  Set Variable    Robot street 66
+
+    MY Open Site  https://demoqa.com/automation-practice-form  //div[@class='main-header']
+    Create Student  ${first_name}  ${last_name}  ${email}  ${gender}  ${mobile}  ${dob}  ${current_address}
+    MY Pause Test
 
 
 

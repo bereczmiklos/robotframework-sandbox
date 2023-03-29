@@ -27,5 +27,4 @@ MY teardown
     Close All Browsers
 
 MY pause test
-    [Arguments]    ${message}
-    Pause Execution     ${message}
+    Pause Execution     Test paused
