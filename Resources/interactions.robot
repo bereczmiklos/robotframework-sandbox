@@ -49,3 +49,8 @@ UI alert should be present
 UI scroll to view
     [Arguments]    ${locator}
     Scroll Element Into View    ${locator}
+
+UI select option by label
+    [Arguments]    ${locator}  ${label}
+    Wait Until Element Is Visible    ${locator}
+    Select From List By Label    ${locator}    ${label}

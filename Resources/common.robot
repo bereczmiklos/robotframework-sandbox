@@ -27,4 +27,13 @@ MY teardown
     Close All Browsers
 
 MY pause test
-    Pause Execution     Test paused
+    Pause Execution     Test paused manually
+
+MY reload page
+    Reload Page
+
+MY log list
+    [Arguments]    @{list}
+    FOR  ${element}  IN  @{list}
+        Log To Console    ${element}
+    END

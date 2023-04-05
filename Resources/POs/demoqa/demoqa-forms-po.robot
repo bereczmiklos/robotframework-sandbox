@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../Resources/interactions.robot
+Resource    ../Resources/common.robot
 
 *** Variables ***
 ${first_name_input}             //input[@id='firstName']
@@ -21,14 +22,15 @@ Create student
     UI Type Text    ${mobile_input}  ${mobile}
     UI Type Text    ${dob_input}  ${dob}
     UI Type Text    ${current_address_textarea}  ${current_address}
+    MY Pause Test
     Private Select Gender    ${gender}
 
 Private select gender
     [Arguments]    ${gender}
 
-    IF  '${gender}'  ==  'male'
+    IF  '${gender}'=='male'
         UI Click Element    ${gender_male_radio}
-    ELSE IF    '${gender}'  ==  'female'
+    ELSE IF    '${gender}'=='female'
         UI Click Element    ${gender_female_radio}
     ELSE
         UI Click Element    ${gender_other_radio}
