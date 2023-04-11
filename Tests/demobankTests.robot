@@ -1,9 +1,9 @@
 *** Settings ***
 Resource    ../Resources/common.robot
-Resource    Resources/POs/demobank/demobank-customerlogin-po.robot
-Resource    Resources/POs/demobank/demobank-managerlogin-po.robot
-Resource    Resources/POs/demobank/demobank-login-po.robot
-Resource    Resources/POs/demobank/demobank-home-po.robot
+Resource    ../Resources/POs/demobank/demobank-customerlogin-po.robot
+Resource    ../Resources/POs/demobank/demobank-managerlogin-po.robot
+Resource    ../Resources/POs/demobank/demobank-login-po.robot
+Resource    ../Resources/POs/demobank/demobank-home-po.robot
 Test Setup     MY setup  ${BROWSER}  ${URL}  ${WAITFOR}
 Test Teardown  MY teardown
 

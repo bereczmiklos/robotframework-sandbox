@@ -1,6 +1,7 @@
 *** Settings ***
-Resource    Resources/interactions.robot
-Resource    Resources/POs/demobank/demobank-customerlogin-po.robot
+Resource    C:\sandbox\test-automatization\robot-framework\robotframework-sandbox\Resources\interactions.robot
+Resource    C:\sandbox\test-automatization\robot-framework\robotframework-sandbox\Resources\common.robot
+Resource    demobank-customerlogin-po.robot
 
 *** Variables ***
 ${customer_login_btn}   //button[@ng-click='customer()']

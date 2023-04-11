@@ -32,7 +32,7 @@ UI type password
     Wait Until Element Is Visible    ${locator}
     Wait Until Element Is Enabled    ${locator}
     Clear Element Text    ${locator}
-    Input Text    ${password}
+    Input Text    ${locator}    ${password}
 
 UI wait until page contains
     [Arguments]    ${text}

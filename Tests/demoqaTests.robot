@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../Resources/common.robot
 Resource    ../Resources/interactions.robot
-Resource    ../POs/demoqa/demoqa-forms-po.robot
+Resource    ../Resources/POs/demoqa/demoqa-forms-po.robot
 Test Setup     MY setup  ${BROWSER}  ${URL}  ${WAITFOR}
 Test Teardown  MY teardown
 
